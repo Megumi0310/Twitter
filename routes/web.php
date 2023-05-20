@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/timeline','TweetController@showTimelinePage')->name('timeline');
 
 Route::post('/timeline','TweetController@postTweet')->name('timeline');
+
+Route::post('/timeline/delete/{id}','TweetController@destroy')->name('destroy');
+
+

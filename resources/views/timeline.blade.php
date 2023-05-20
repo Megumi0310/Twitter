@@ -21,21 +21,14 @@
       @foreach ($tweets as $tweet)
       <div class="tweet-box">
         <div>{{ $tweet->tweet }}</div>
-       @endforeach
-
-        <div class="destroy-bin">
-          <form action="">
-            <input type="submit",value="削除">
-          </form>
-
-
+          <div class="destroy-btn">
+            <form action="{{ route('destroy',[$tweet->id]) }}" method="post">
+              @csrf
+              <input type="submit" value="削除">
+            </form>
+          </div>
         </div>
-    </div>
-
-    <div class="tweet-wrapper">
-      <div class="tweet-box" >
-
-      </div>
+      @endforeach
     </div>
   </div>
 </body>

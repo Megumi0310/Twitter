@@ -42,3 +42,11 @@ flex-direction: row;
 align-items: center;
 }
 
+.tweet-box > div{
+width: 40%;
+}
+
+.destroy-btn{
+  text-align: right;
+}
+
