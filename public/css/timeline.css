@@ -30,4 +30,15 @@ background-color: #E6ECF0;
   color: #ffffff;
   border-radius: 10px;
   padding:0.5rem;
+  border: none;
 }
+
+.tweet-box{
+padding: 2rem;
+border-top: solid 1px #E6Ecf0;
+border-bottom: solid 1px #E6ECF0;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+

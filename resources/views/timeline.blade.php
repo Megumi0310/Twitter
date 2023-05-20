@@ -21,6 +21,8 @@
       @foreach ($tweets as $tweet)
       <div class="tweet-box">
         <div>{{ $tweet->tweet }}</div>
+       @endforeach
+
         <div class="destroy-bin">
           <form action="">
             <input type="submit",value="削除">
@@ -28,7 +30,6 @@
 
 
         </div>
-      @endforeach
     </div>
 
     <div class="tweet-wrapper">
