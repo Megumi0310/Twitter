@@ -12,6 +12,7 @@ class TweetController extends Controller
     {
 			//latest関数：テーブル内のレコードを作成日時の降順で取得する
 			$tweets = Tweet::latest()->get();
+			// dd($tweets);
       return view('timeline',['tweets' => $tweets]);
     }
     //formでデータを送信する際は、$requestの中にデータを入れて送信する
