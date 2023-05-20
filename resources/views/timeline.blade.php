@@ -20,7 +20,8 @@
     <div class="tweet-wrapper">
       @foreach ($tweets as $tweet)
       <div class="tweet-box">
-      <div>{{ $tweet->user->name }}</div>
+      {{-- <div>{{ $tweet->user->name }}</div> --}}
+        <img src=" {{ asset('storege/images/'.$tweet->user->avatar) }}" alt="">
         <div>{{ $tweet->tweet }}</div>
           <div class="destroy-btn">
             {{-- ログインしているユーザーにのみ、そのユーザーの投稿削除ボタンを表示する --}}
