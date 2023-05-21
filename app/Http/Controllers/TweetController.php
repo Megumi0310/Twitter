@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\Paginator;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Tweet;
@@ -13,7 +15,7 @@ class TweetController extends Controller
 	public function showTimelinePage()
 	{
 		//latest関数：テーブル内のレコードを作成日時の降順で取得する
-		$tweets = Tweet::latest()->get();
+		$tweets = Tweet::simplepaginate(3);
 		// dd($tweets);
 		return view('timeline', ['tweets' => $tweets]);
 
