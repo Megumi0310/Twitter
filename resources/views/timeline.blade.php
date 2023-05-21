@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Twitter</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
   <script src="{{ asset('js/app.js') }}"></script>
 </head>
@@ -49,9 +49,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -97,10 +95,10 @@
           @if($tweet->likes()->where('user_id', Auth::user()->id)->count()> 0)
 
           {{-- <a href="/likes/{{ $tweet->likeBy(AUTH::user())->firstOrFail()->id }}">いいね取り消し</a> --}}
-          <a href="/likes/{{ $tweet->likes()->where('user_id', Auth::user()->id)->firstOrFail()->id}}"><i class="fa-solid fa-heart-crack"></i></a>
+          <a href="/likes/{{ $tweet->likes()->where('user_id', Auth::user()->id)->firstOrFail()->id}}"><i class="fas fa-heart-broken"></i></a>
 
           @else
-          <a href="/tweets/{{ $tweet->id }}/likes"><i class="fa-regular fa-heart"></i></a>
+          <a href="/tweets/{{ $tweet->id }}/likes"><i class="fas fa-heart"></i></a>
           @endif
           {{ $tweet->likes->count() }}
         </div>
