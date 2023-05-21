@@ -34,6 +34,13 @@
             @endif
           </div>
         </div>
+        <div style="padding:10px 40px">
+          @if($tweet->likedBy(Auth::user())->count()) > 0)
+          <a href="/likes/{{ $tweet->likeBy(AUTH::user())->firstOrFail()->id }}">いいね取り消し</a>
+          @else
+          <a href="/tweets/{{ $tweet->id }}/likes">いいね</a>
+          @endif
+        </div>
       @endforeach
     </div>
   </div>
