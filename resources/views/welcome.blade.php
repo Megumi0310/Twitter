@@ -21,8 +21,8 @@
         </style>
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     </head>
-    {{-- <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
+    <body class="antialiased">
+        {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
             <div class="content">
                 <div class="main-container">
                     <h1>世界とつながろう</h1>
@@ -140,6 +140,6 @@
                     </div>
                 </div> --}}
             {{-- </div> --}}
-        </div>
+      </div>
     </body>
-</html>
+    </html>
